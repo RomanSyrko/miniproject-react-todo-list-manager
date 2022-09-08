@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body, .App {
+    font-family: fantasy, Papyrus;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: #deefff;
+}
+
+button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: #08c;
+}
+
+button:hover {
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px #4d4d4d;
+}
+
+.App {
+    display: flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+    width: 30%;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+}
+
+.app-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.app-sidebar-header h1 {
+    margin: 0;
+}
+
+.app-sidebar-notes {
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
+}
+
+.app-sidebar-notes::-webkit-scrollbar {
+    display: none;
+}
+
+.app-sidebar-note {
+    padding: 25px;
+    cursor: pointer;
+}
+
+.sidebar-note-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-btn {
+    color: #0ca47f;
+}
+
+.delete-btn {
+    color: #bb1234;
+    margin: 10px;
+}
+
+.app-sidebar-note p {
+    margin: 10px 0;
+}
+
+.app-sidebar-note small {
+    display: block;
+    color: #999;
+}
+
+.app-sidebar-note:hover {
+    background: rgba(221, 221, 221, 0.35);
+}
+
+.app-sidebar-note.active, .app-sidebar-note.active small {
+    background: rgb(205, 225, 255);
+}
+
+.app-main {
+    width: 70%;
+    height: 100vh;
+}
+
+.app-main-note-edit, .app-main-note-preview {
+    height: 90vh;
+}
+
+.no-active-note {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #999;
+}
+
+.app-main-note-edit {
+    padding: 25px;
+}
+
+.app-main-note-edit input, textarea {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    height: calc(100vh - 130px);
+    padding: 10px;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+}
+
+.app-main-note-edit input {
+    height: 50px;
+    font-size: 2rem;
+}
+
+.app-main-note-edit textarea:focus {
+    outline: none;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.wrap-delete-and-check {
+    display: flex;
+    flex-direction: column;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.title-name {
+    font-size: 28px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
